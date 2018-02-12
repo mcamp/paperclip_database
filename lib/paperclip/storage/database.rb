@@ -101,7 +101,7 @@ module Paperclip
           @paperclip_file_model = @attachment_class.const_set(class_name, Class.new(::ActiveRecord::Base))
           @paperclip_file_model.table_name = @options[:database_table] || name.to_s.pluralize
           @paperclip_file_model.validates_uniqueness_of :style, :scope => instance.class.table_name.classify.underscore + '_id'
-          @paperclip_file_model.scope :file_for, lambda {|style| @paperclip_file_model.where('style = ?', style) }
+          @paperclip_file_model.scope :file_for, lambda {|style| where('style = ?', style) }
         end
       end
       private :setup_paperclip_file_model
