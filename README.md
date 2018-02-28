@@ -32,7 +32,7 @@ Include the gem in your Gemfile:
 Or, if you want to get the latest, you can get master from the main
 paperclip repository:
 
-    gem "paperclip_database", :git => "git://github.com/softace/paperclip_database.git"
+    gem "paperclip_database", :git => "git://github.com/mcamp/paperclip_database.git"
 
 If you're trying to use features that don't seem to be in the latest
 released gem, but are mentioned in this README, then you probably need
